@@ -622,6 +622,7 @@ body {
   line-height: 20px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-mail-button {
   background-color: var(--accent-color);
@@ -639,6 +640,11 @@ body {
   margin-left: 12px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-mail-button:hover,
+.form-mail-button:focus{
+  background-color: var(--button-hover);
 }
 .form-mail-icon {
   margin-left: 10px;
@@ -669,12 +675,16 @@ body {
   border-radius: 4px;
   width: 100%;
   height: 40px;
+  padding-left: 42px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-message {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 100%;
   height: 120px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-input-wrapper {
   position: relative;
@@ -684,10 +694,19 @@ body {
   top: 11px;
   left: 12px;
   fill: var(--base-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-message:focus,
+.contact-form-input:focus {
+  border-color: var(--accent-color);
+}
+.contact-form-input:focus + .contact-form-icon{
+  fill: var(--accent-color);
 }
 .contact-form-message {
   resize: none;
   padding: 12px 16px;
+  outline: none;
 }
 .contact-form-message::placeholder {
   font-size: 12px;
@@ -702,6 +721,7 @@ body {
   color: var(--gray-color);
   position: relative;
   padding-left: 24px;
+  user-select: none;
 }
 .contact-form-checkbox-link {
   color: var(--accent-color);
@@ -714,13 +734,34 @@ body {
   top: 0;
   width: 16px;
   height: 16px;
-  border: 2px solid var(--base-color);
-  border-radius: 2px;
-
+  cursor: pointer;
+  display: block;
+  background-image: url(../images/box.svg);
 }
 .contact-form-checkbox:checked + .contact-form-checkbox-label::before {
-
+  background-image: url(../images/icon-check.svg);
 }
+.contact-form-btn{
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-btn:hover,
+.contact-form-btn:focus{
+  background-color: var(--button-hover);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
