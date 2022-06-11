@@ -568,6 +568,7 @@ body {
 }
 .modal {
   width: 528px;
+  height: 581px;
   margin: 0 auto;
   background-color: var(--white-color);
   position: relative;
@@ -594,6 +595,12 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  fill: var(--black-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close:hover,
+.modal-close:focus{
+  fill: var(--accent-color);
 }
 .is-hidden {
   visibility: hidden;
@@ -616,6 +623,7 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding-left: 16px;
+  color: var(--white-color);
 }
 .form-mail-frame::placeholder {
   font-size: 16px;
@@ -724,6 +732,10 @@ body {
   padding-left: 24px;
   user-select: none;
 }
+.contact-form-checkbox-item {
+  display: flex;
+  justify-content: center;
+}
 .contact-form-checkbox-link {
   color: var(--accent-color);
   text-decoration-line: underline;
@@ -732,7 +744,7 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  top: 3px;
   width: 16px;
   height: 16px;
   cursor: pointer;
