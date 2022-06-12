@@ -746,13 +746,20 @@ body {
   left: 0;
   top: 3px;
   width: 16px;
-  height: 16px;
+  height: 15px;
   cursor: pointer;
   display: block;
-  background-image: url(../images/box.svg);
+  border: 2px solid var(--base-color);
+  border-radius: 2px;
+  box-sizing: border-box;
+  outline: var(--accent-color);
 }
 .contact-form-checkbox:checked + .contact-form-checkbox-label::before {
   background-image: url(../images/icon-check.svg);
+  border: none;
+}
+.contact-form-checkbox:focus + .contact-form-checkbox-label::before {
+  border-color: var(--accent-color);
 }
 .contact-form-btn{
   color: var(--white-color);
